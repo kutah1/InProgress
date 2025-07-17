@@ -1,0 +1,21 @@
+import React from 'react'
+
+const Navbar = () => {
+  return (
+    <nav className="flex   flex-row md:flex-row items-center justify-between bg-gray-800 text-white p-4 w-full">
+      <p className="mb-2 md:mb-0 text-2xl font-bold ">GIGUP</p>
+      <p className="flex flex-row md:flex-row items-center gap-2 md:gap-4">
+        <p className="hover:text-amber-500 transition-colors cursor-pointer">Browse Gigs</p>
+        <p className="hover:text-amber-500 transition-colors cursor-pointer">How it Works</p>
+        <p className="hover:text-amber-500 transition-colors cursor-pointer">Users</p>
+        <p className="hover:text-amber-500 transition-colors cursor-pointer">FAQS/Help</p>
+      </p>
+      <p className="flex gap-2 mt-2 md:mt-0">
+        <button className="btn border border-white text-white bg-transparent hover:bg-gray-700">Login</button>
+        <button className="btn text-white bg-amber-500 hover:bg-amber-600">SignUp</button>
+      </p>
+    </nav>
+  )
+}
+
+export default Navbar
