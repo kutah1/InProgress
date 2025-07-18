@@ -11,13 +11,14 @@ const cardData = [
   },
   {
     icon: <CiDeliveryTruck className="w-10 h-10 text-black bg-white rounded-full shadow" />,
-    title: "Deliver and Grow",
-    desc: "Deliver your gig, get feedback, and grow your reputation."
+    title: "Deliver  Value",
+    desc: `Collaborate with real clients, deliver 
+     solutions that matter, and grow your credibility through hands-on experience.`
   },
   {
     icon: <GiTakeMyMoney className="w-10 h-10 text-black bg-white rounded-full shadow" />,
     title: "Earn and Grow",
-    desc: "Earn money and experience while building your skills and network."
+    desc: "Turn every project into profit and every experience into progress. Grow your income and impact"
   }
 ];
 

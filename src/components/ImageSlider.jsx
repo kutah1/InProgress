@@ -83,13 +83,12 @@ const handleCardClick = (clickedIdx) => {
           </motion.div>
         ))}
       </div>
-      <button
+      {/* <button
         className="mt-8 px-6 py-2 bg-orange-500 text-white rounded-lg font-semibold shadow hover:bg-orange-600 transition"
         onClick={handleNext}
       >
         Next
-      </button>
-      <div className="mt-4 text-gray-500 text-sm">Will be modified soon</div>
+      </button> */}
     </div>
   )
 }

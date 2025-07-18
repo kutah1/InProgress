@@ -1,6 +1,7 @@
 import React from 'react'
 import ChatBot from '../assets/images/chatbot.png'
 import Cards from '../components/Cards'
+import Red from '../assets/images/red.png'
 
 const Section3 = () => {
   return (
@@ -15,11 +16,10 @@ const Section3 = () => {
       
         <div className="flex flex-col items-center justify-center">
             
-          <img src={ChatBot} alt="ChatBot" className=" max-w-xs md:max-w-md rounded-xl shadow-lg object-cover shadow-amber-800" />
+          <img src={Red} alt="Red" className=" md:w-6xl mx-10 md:h-80  rounded-xl shadow-lg object-cover shadow-amber-800" />
         </div>
         {/* Card Column */}
-        <div className="flex flex-col justify-center ">
-         
+        <div className='flex flex-col justify-center items-center text-black p-2 sm:p-4 md:p-8'>
           <Cards />
         </div>
       </div>
