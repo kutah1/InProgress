@@ -100,40 +100,38 @@ const Section1 = () => {
 
          <div className='relative flex-col-reverse flex '>
           {/* Implement the motion here */}
-
-<div className="flex flex-row w-full items-stretch justify-between">
-  {/* Left column: all text, stats, search, buttons */}
-  <div className="flex flex-col flex-1 justify-center pr-8">
-    {/* ...existing code for text, stats, search, buttons... */}
-  </div>
-  {/* Right column: images stacked horizontally, aligned center */}
-  <div className="flex flex-1 items-center justify-center">
-    <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
-      {images.map((img, idx) => {
-        const isActive = idx === activeIdx;
-        const offset = idx * 80; // horizontal offset for stacking
-        return (
-          <motion.img
-            key={img.alt}
-            src={img.src}
-            alt={img.alt}
-            className="w-70 h-90 absolute rounded-xl shadow-lg cursor-pointer"
-            style={{
-              left: `${offset}px`,
-              zIndex: isActive ? 30 : img.z,
-              opacity: isActive ? 1 : 0.7,
-              transform: `scale(${isActive ? 1 : 0.85})`,
-              boxShadow: isActive ? "0 8px 24px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
-              transition: "all 0.4s cubic-bezier(.4,0,.2,1)",
-            }}
-            onClick={() => handleImageClick(idx)}
-          />
-        );
-      })}
+          <div className="flex flex-row w-full items-stretch justify-between">
+    {/* Left column: all text, stats, search, buttons */}
+    <div className="flex flex-col flex-1 justify-center pr-8">
+      {/* ...existing code for text, stats, search, buttons... */}
+    </div>
+    {/* Right column: images stacked horizontally, aligned center */}
+    <div className="flex flex-1 items-center justify-center">
+      <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
+        {images.map((img, idx) => {
+          const isActive = idx === activeIdx;
+          const offset = idx * 80; // horizontal offset for stacking
+          return (
+            <motion.img
+              key={img.alt}
+              src={img.src}
+              alt={img.alt}
+              className="w-70 h-90 absolute rounded-xl shadow-lg cursor-pointer"
+              style={{
+                left: `${offset}px`,
+                zIndex: isActive ? 30 : img.z,
+                opacity: isActive ? 1 : 0.7,
+                transform: `scale(${isActive ? 1 : 0.85})`,
+                boxShadow: isActive ? "0 8px 24px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
+                transition: "all 0.4s cubic-bezier(.4,0,.2,1)",
+              }}
+              onClick={() => handleImageClick(idx)}
+            />
+          );
+        })}
+      </div>
     </div>
   </div>
-</div>
-
         </div>
 
 
