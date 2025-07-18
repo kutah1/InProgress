@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Red from '../assets/images/red.png'
 import { FaRegCheckCircle } from "react-icons/fa";
-const Section4 = () => {
+const Section4 = memo(() => {
   const cardData = [
     {
       title: "Access to Diverse, Vetted Talent",
@@ -69,6 +69,6 @@ const Section4 = () => {
       </div>
     </div>
   )
-}
+})
 
 export default Section4

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, memo } from "react";
 import Red from '../assets/images/red.png'
 import Yellow from '../assets/images/yellow.png'
 import Green from '../assets/images/green.png'
 
-const Section1 = () => {
+const Section1 = memo(() => {
   const images = useMemo(() => [
     { src: Red, alt: "Red", z: 30 },
     { src: Yellow, alt: "Yellow", z: 20 },
@@ -138,6 +138,6 @@ const Section1 = () => {
 
     </div>
   )
-}
+})
 
 export default Section1

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import ChatBot from '../assets/images/chatbot.png'
 import Cards from '../components/Cards'
 import Red from '../assets/images/red.png'
 
-const Section3 = () => {
+const Section3 = memo(() => {
   return (
     <section className="bg-black py-10 px-4 md:px-16 w-full">
         <div className='text-center '>
@@ -25,6 +25,6 @@ const Section3 = () => {
       </div>
     </section>
   )
-}
+})
 
 export default Section3
