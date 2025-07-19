@@ -157,45 +157,16 @@ const Section1 = memo(() => {
       <div className='mx-5'>
 
       
-      <span className='bg-white m-5 mt-5 ml-5 rounded-lg w-full  flex items-center p-2 mb-4  mr-20'>
+      <span className='bg-white m-5 mt-5 ml-5 rounded-lg w-full  flex items-center p-2 mb-4  mr-20 transform -translate-x-5'>
           <input type="text" placeholder='Search for Gigs' className='text-black text-sm px-2 py-1 rounded-l-lg w-full  focus:outline-none'/>
           <button className='btn text-white  rounded-r-lg px-5' style={{backgroundColor:'#0F172A'}}>Search</button>
         </span>
         </div>
-
-         <div className="flex flex-1 md:hidden items-center justify-center transform -translate-x-10">
-      <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
-        {images.map((img, idx) => {
-          const isActive = idx === activeIdx;
-          const offset = idx * 80; // horizontal offset for stacking
-          return (
-            <motion.img
-              key={img.alt}
-              src={img.src}
-              alt={img.alt}
-              className="w-50  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
-              style={{
-                left: `${offset}px`,
-                zIndex: isActive ? 30 : img.z,
-                opacity: 1,
-                
-                transform: `scale(${isActive ? 1 : 0.85})`,
-                boxShadow: isActive ? "0 20px 30px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
-                transition: "all 0.4s cubic-bezier(.4,0,.2,1)",
-              }}
-              onClick={() => handleImageClick(idx)}
-              
-            />
-          );
-        })}
-      </div>
-    </div>
-  </div>
-   
+        
     </div>
    </div>
 
-    
+    </div>
   )
 })
 
