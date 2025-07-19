@@ -163,7 +163,7 @@ const Section1 = memo(() => {
         </span>
         </div>
 
-         <div className="flex flex-1 md:hidden items-center justify-center">
+         <div className="flex flex-1 md:hidden items-center justify-center transform -translate-x-10">
       <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
         {images.map((img, idx) => {
           const isActive = idx === activeIdx;
