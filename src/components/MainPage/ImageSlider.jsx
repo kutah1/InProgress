@@ -38,7 +38,7 @@ const ImageSlider = () => {
   const handleCardClick = useCallback((idx) => setActiveIdx(idx), []);
 
   return (
-    <div className="flex justify-center items-center mt-10 min-h-[500px]">
+    <div className="md:flex justify-center items-center mt-10 min-h-[500px] hidden ">
       <div className="relative flex w-full max-w-5xl justify-center items-center">
         {cards.map((card, idx) => {
           const isActive = idx === activeIdx;

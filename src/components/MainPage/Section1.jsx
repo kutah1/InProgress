@@ -17,8 +17,8 @@ const Section1 = memo(() => {
   }, []);
 
   return (
-
-    <div className='  text-white md:text-4xl  flex flex-row p-5 items-start' style={{backgroundColor:'#FF790C'}}>
+    <div>
+    <div className='  hidden  text-white md:text-4xl  md:flex flex-row p-5 items-start' style={{backgroundColor:'#FF790C'}}>
     <div className=' text-white text-xl md:text-4xl p-2 mx-10  w-1/2  ' style={{backgroundColor:'#FF790C'}}>
       
 
@@ -109,9 +109,7 @@ const Section1 = memo(() => {
           {/* Implement the motion here */}
           <div className="flex flex-row w-full items-stretch justify-between">
     {/* Left column: all text, stats, search, buttons */}
-    <div className="flex flex-col flex-1 justify-center pr-8">
-      {/* ...existing code for text, stats, search, buttons... */}
-    </div>
+    
     {/* Right column: images stacked horizontally, aligned center */}
     <div className="flex flex-1 items-center justify-center">
       <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
@@ -146,6 +144,58 @@ const Section1 = memo(() => {
       
 
     </div>
+
+   <div>
+    <div className="md:hidden bg-amber-600 text-white text-2xl p-5">
+      <h1 className="font-semibold p-4">
+        Turn your skills into real, world experience on right from campus.
+
+      </h1>
+      <h1 className="text-lg p-4">
+        GigUpp helps students earn and grow by offering Talent Gig and Lecturer-Featured gigs, locally and nationwide.
+      </h1>
+      <div className='mx-5'>
+
+      
+      <span className='bg-white m-5 mt-5 ml-5 rounded-lg w-full  flex items-center p-2 mb-4  mr-20'>
+          <input type="text" placeholder='Search for Gigs' className='text-black text-sm px-2 py-1 rounded-l-lg w-full  focus:outline-none'/>
+          <button className='btn text-white  rounded-r-lg px-5' style={{backgroundColor:'#0F172A'}}>Search</button>
+        </span>
+        </div>
+
+         <div className="flex flex-1 md:hidden items-center justify-center">
+      <div className="relative flex flex-row items-center justify-center w-[320px] h-[500px]">
+        {images.map((img, idx) => {
+          const isActive = idx === activeIdx;
+          const offset = idx * 80; // horizontal offset for stacking
+          return (
+            <motion.img
+              key={img.alt}
+              src={img.src}
+              alt={img.alt}
+              className="w-60  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
+              style={{
+                left: `${offset}px`,
+                zIndex: isActive ? 30 : img.z,
+                opacity: 1,
+                
+                transform: `scale(${isActive ? 1 : 0.85})`,
+                boxShadow: isActive ? "0 20px 30px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
+                transition: "all 0.4s cubic-bezier(.4,0,.2,1)",
+              }}
+              onClick={() => handleImageClick(idx)}
+              
+            />
+          );
+        })}
+      </div>
+    </div>
+  </div>
+   
+    </div>
+   </div>
+
+    
   )
 })
 
