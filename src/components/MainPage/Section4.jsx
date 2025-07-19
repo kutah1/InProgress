@@ -47,7 +47,8 @@ const Section4 = memo(() => {
     <div >
 
     <div className='flex flex-col justify-center items-center text-black p-2 sm:p-4 md:p-8'>
-          <h1 className='text-orange-400  items-start  text-left mr-10 transform md:-translate-x-55 text-2xl sm:text-3xl md:text-4xl font-semibold  sm:ml-5 my-6 sm:my-10 '>Why Students Use GigUpp</h1>
+          <h1 className='text-orange-400   items-start  text-center mr-10  md:-translate-x-15 text-2xl sm:text-3xl md:text-4xl font-semibold  sm:ml-5 my-6 sm:my-10 '>
+            Why Students Use GigUpp</h1>
 
       <img src={SoftLife} alt="" className='rounded-lg md:h-5xl  md:w-4xl w-full mx-2 sm:mx-5' />
       <div>
