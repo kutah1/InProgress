@@ -11,15 +11,10 @@ module.exports = {
           400: '#fb923c', // preserve orange-400
         },
               
-     primary:"#ffc001",
-     secondary:"#ff9c01",
+     primary:"#FF790C",
+     secondary:"#0F172A",
     
-        amber: {
-          500: '#f59e42', // preserve amber-500
-        },
-        gray: {
-          800: '#1f2937', // preserve gray-800
-        },
+      
       },
          container:{
         center: true,

@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import Red from '../assets/images/red.png'
+import SoftLife from '../assets/images/SoftLife.jpg'
 import { FaRegCheckCircle } from "react-icons/fa";
 const Section4 = memo(() => {
   const cardData = [
@@ -44,9 +44,12 @@ const Section4 = memo(() => {
     },
   ];
   return (
+    <div >
+
     <div className='flex flex-col justify-center items-center text-black p-2 sm:p-4 md:p-8'>
-      <h1 className='text-orange-400 text-2xl sm:text-3xl md:text-4xl font-semibold ml-2 sm:ml-5 my-6 sm:my-10'>Why Students Use GigUpp</h1>
-      <img src={Red} alt="" className='rounded-lg h-[120px] sm:h-[160px] md:h-[200px] w-full mx-2 sm:mx-5' />
+          <h1 className='text-orange-400  items-start  text-left mr-10 transform md:-translate-x-55 text-2xl sm:text-3xl md:text-4xl font-semibold  sm:ml-5 my-6 sm:my-10 '>Why Students Use GigUpp</h1>
+
+      <img src={SoftLife} alt="" className='rounded-lg md:h-5xl  md:w-4xl w-full mx-2 sm:mx-5' />
       <div>
         <h2 className='text-center my-6 sm:my-10 text-xl sm:text-2xl md:text-4xl font-semibold text-orange-400 mb-6 sm:mb-10'>
            These aren't just students, they're future professionals gaining <br/>
@@ -67,6 +70,7 @@ const Section4 = memo(() => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 })

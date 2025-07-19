@@ -1,94 +1,67 @@
 import React from 'react'
-import {motion} from 'framer-motion'
-import Red from '../assets/images/red.png'
-import Green from '../assets/images/green.png'
-import Yellow from '../assets/images/yellow.png'
-import { useState } from 'react'
+import Red from '../assets/images/PCandDayLight.jpg'
+import { GoStarFill } from "react-icons/go";
 const ImageSlider = () => {
-    const [positionIndex,setPositionIndex]=useState([0,1,2])
-
-    const handleNext=()=>{
-        setPositionIndex((prevIndex)=>{
-            const newIndex=prevIndex.map((index)=>(index+1)%3)         
-            return newIndex
-        })
-    }
-
-const images =[
-    Red,
-    Green,
-    Yellow
-
-]
-const positions=[
-    'center',
-    'left',
-    'right',
-]
-const imagevariants ={
-    center:{
-        x:0,
-        scale:1,
-        zIndex:5,
-    },
-    left:{  
-        x:'-50%',
-        scale:0.8,
-        zIndex:4,
-    },
-    right:{
-        x:'50%',
-        scale:0.8,
-        zIndex:4,
-    }
-}
-
-const labels = ["Red", "Green", "Yellow"];
-
-// Bring clicked card to center
-const handleCardClick = (clickedIdx) => {
-  if (positionIndex[clickedIdx] === 0) return; // Already center
-  // Rotate array so clicked card is center
-  let newOrder = [...positionIndex];
-  while (newOrder[clickedIdx] !== 0) {
-    newOrder = newOrder.map((i) => (i + 1) % 3);
-  }
-  setPositionIndex(newOrder);
-};
-
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="relative w-full flex justify-center items-center" style={{ height: '340px' }}>
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="absolute flex flex-col items-center cursor-pointer"
-            initial={positions[positionIndex[index]]}
-            animate={positions[positionIndex[index]]}
-            variants={imagevariants}
-            transition={{ duration: 0.5 }}
-            style={{ width: '40%' }}
-            onClick={() => handleCardClick(index)}
-          >
-            <div className="relative w-full h-[220px]">
-              <img
-                src={image}
-                alt={labels[index]}
-                className={`rounded-[18px] shadow-2xl border-4 border-white transition-all duration-300 w-full h-full object-cover ${positionIndex[index] === 0 ? 'scale-105 ring-4 ring-orange-400 z-10' : 'opacity-80'}`}
-              />
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-2 rounded-xl font-bold text-lg text-white bg-black bg-opacity-40 w-fit pointer-events-none">
-                Love Ghana
-              </div>
+    <div className="flex  border-orange-500 border-2 w-1/3 rounded-2xl p-3 justify-center items-center content-center ">
+
+      <div  m-10>
+        <div className='mx-5'>
+          <img src={Red} alt="" className='w-100 h-60 rounded' />
+          <div className=''>
+            <h2 className='text-orange-500'>Talent Gig</h2>
+            <div className='flex flex-row items-center justify-between'>
+               <h2>Talent Gig</h2>
+               <button className='px-10 bg-orange-400 text-white rounded p-2'>Pro</button>
             </div>
-          </motion.div>
-        ))}
+            <div>Browse your website traffic with engaging <br />
+            SEO-optimized blog posts crafted to drive <br />
+            results and keep your readers hooked.</div>
+            
+          </div>
+          <div className="flex flex-row ">
+            <div className='bg-black rounded-full w-10 h-10'>
+                  
+            </div>
+            <div >
+             
+               
+
+
+              <div className='flex flex-row  ml-4 '>
+                 <h1>Olivia Shye</h1>
+              <GoStarFill className='w-5 h-20 absolute  text-orange-500 mr-5' />
+              <GoStarFill className='w-5 h-20 absolute text-orange-500 ml-5' />
+              <GoStarFill className='w-5 h-20 absolute text-orange-500 ml-10'/>
+            </div>
+            
+            </div>
+           
+         
+
+
+          </div>
+          <div className='text-center'>
+             <button className='text-white w-50 rounded-lg px-8 p-4 mt-5 text-center  bg-orange-500 '>
+              
+              Order :
+              </button>
+            </div>
+           
+        </div>
+       
+
       </div>
-      {/* <button
-        className="mt-8 px-6 py-2 bg-orange-500 text-white rounded-lg font-semibold shadow hover:bg-orange-600 transition"
-        onClick={handleNext}
-      >
-        Next
-      </button> */}
+      <div>
+
+
+      </div>
+      <div>
+
+
+      </div>
+      
+      
     </div>
   )
 }

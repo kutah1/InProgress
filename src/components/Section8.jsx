@@ -1,12 +1,12 @@
-import Red from '../assets/images/red.png'
+import Red from '../assets/images/ChatFeature.jpg'
 import { HiOutlineChatAlt2 } from "react-icons/hi";
 
 import { FaRegCheckCircle } from "react-icons/fa";
 const Section8 = () => {
   return (
 
-    <div className='flex flex-col justify-center items-center text-black p-2 sm:p-4 md:p-8'>
-    <div className='m-10'>
+    <div className='flex flex-col md:flex-row w-full text-black p-2 sm:p-4 md:p-8'>
+    <div className='m-10 md:w-1/2'>
         <h1 className='font-bold text-4xl my-5'>
             Upgrade to Pro
         </h1>
@@ -42,20 +42,15 @@ const Section8 = () => {
 
       
     </div>
-    <div>
-      <p className='text-left items-center flex '>
-
-      </p>
-        
+    <div className=''>
+    
+         <img src={Red} alt='' className=' transform -translate-y-20'/>
 
 
-        <div>
-          <img src={Red} alt="" className='w-20 h-20 relative rounded-full '/>
         </div>
-
-        <HiOutlineChatAlt2 className='absolute w-10 h-10  text-white transform translate-x-12 -translate-y-7 rounded-full bg-orange-400' />
-
-    </div>
+       
+        
+      
     </div>
   )
 }

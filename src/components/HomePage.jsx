@@ -14,6 +14,8 @@ const HomePage = () => {
   <Navbar/>
 <Section1/>
 <ImageSlider/>
+
+
 <Section2/>
 <Section3/>
 <Section4/>

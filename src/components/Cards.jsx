@@ -16,7 +16,7 @@ const cardData = [
      solutions that matter, and grow your credibility through hands-on experience.`
   },
   {
-    icon: <GiTakeMyMoney className="w-10 h-10 text-black bg-white rounded-full shadow" />,
+    icon: <GiTakeMyMoney className="w-10 h-10 text-black bg-white rounded-full " />,
     title: "Earn and Grow",
     desc: "Turn every project into profit and every experience into progress. Grow your income and impact"
   }
@@ -26,7 +26,7 @@ const Cards = () => {
   return (
     <div className="space-y-6">
       {cardData.map((card, idx) => (
-        <div key={idx} className="flex items-center  text-black rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+        <div key={idx} className="flex items-center  text-black rounded-xl p-4   ">
           <div>{card.icon}</div>
           <div className="ml-5">
             <h1 className="font-bold text-white text-lg mb-1">{card.title}</h1>

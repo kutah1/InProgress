@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useState, useMemo, useCallback, memo } from "react";
-import Red from '../assets/images/red.png'
-import Yellow from '../assets/images/yellow.png'
-import Green from '../assets/images/green.png'
+import Red from '../assets/images/PCandDayLight.jpg'
+import Yellow from '../assets/images/PCandNighLight.jpg'
+import Green from '../assets/images/PCandHands.jpg'
 
 const Section1 = memo(() => {
   const images = useMemo(() => [
@@ -18,9 +18,12 @@ const Section1 = memo(() => {
 
   return (
 
-    <div className='bg-orange-400  text-white md:text-4xl  flex flex-row p-5 items-start'>
-    <div className='bg-orange-400 text-white text-xl md:text-4xl p-2 mx-10  w-1/2  '>
+    <div className='  text-white md:text-4xl  flex flex-row p-5 items-start' style={{backgroundColor:'#FF790C'}}>
+    <div className=' text-white text-xl md:text-4xl p-2 mx-10  w-1/2  ' style={{backgroundColor:'#FF790C'}}>
       
+
+
+      <div className="md:-translate-x-15 transform">
       <div className='text-left mt-5  font-semibold p-4'>
         Turn your skills into 
           <br /> real, 
@@ -34,7 +37,7 @@ const Section1 = memo(() => {
       </div>
        <span className='bg-white mt-5 ml-5 rounded-lg flex items-center p-2 mb-4  mr-20'>
           <input type="text" placeholder='Search for Gigs' className='text-black text-sm px-2 py-1 rounded-l-lg w-full  focus:outline-none'/>
-          <button className='btn text-white bg-gray-800 rounded-r-lg px-5'>Search</button>
+          <button className='btn text-white  rounded-r-lg px-5' style={{backgroundColor:'#0F172A'}}>Search</button>
         </span>
       <div className='text-sm ml-5 md:ml-0.5 md:text-lg my-5'>
 
@@ -78,7 +81,7 @@ const Section1 = memo(() => {
           </div>
 
                 <div className="flex flex-row">
-                    <button className='rounded-lg  px-4 p-2 text-white bg-gray-800  md:mx-5 md:mt-10 w-1/2'>
+                    <button className='rounded-lg  px-4 p-2 text-white  md:mx-5 md:mt-10 w-1/2' style={{backgroundColor:'#0F172A'}}>
                 View as a student
             </button>
                         <button className='rounded-lg px-4 p-2 text-gray-800 bg-white md:mx-5 md:mt-10 w-1/2 mr-10'>
@@ -87,6 +90,10 @@ const Section1 = memo(() => {
 
                   </div>
           
+        </div>
+
+
+
         </div>
 
 
@@ -116,16 +123,18 @@ const Section1 = memo(() => {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className="w-70 h-90 absolute rounded-xl shadow-lg cursor-pointer"
+              className="w-60  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
               style={{
                 left: `${offset}px`,
                 zIndex: isActive ? 30 : img.z,
-                opacity: isActive ? 1 : 0.7,
+                opacity: 1,
+                
                 transform: `scale(${isActive ? 1 : 0.85})`,
-                boxShadow: isActive ? "0 8px 24px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
+                boxShadow: isActive ? "0 20px 30px rgba(0,0,0,0.2)" : "0 2px 8px rgba(0,0,0,0.1)",
                 transition: "all 0.4s cubic-bezier(.4,0,.2,1)",
               }}
               onClick={() => handleImageClick(idx)}
+              
             />
           );
         })}

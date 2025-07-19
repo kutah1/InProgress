@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className="flex   flex-row md:flex-row items-center justify-between bg-gray-800 text-white p-4 w-full">
+    <nav className="flex   flex-row md:flex-row items-center justify-between  text-white p-4 w-full" style={{backgroundColor:'#0F172A'}}>
       <p className="mb-2 md:mb-0 text-2xl font-bold ">GIGUPP</p>
       <div className="flex flex-row md:flex-row items-center gap-2 md:gap-4">
         <p className="hover:text-amber-500 transition-colors cursor-pointer">Browse Gigs</p>

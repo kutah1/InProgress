@@ -6,7 +6,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-    <div className='flex flex-col md:flex-row bg-gray-800 text-white w-full py-8 px-4 md:px-16'>
+    <div className='flex flex-col md:flex-row  text-white w-full py-8 px-4 md:px-16' style={{backgroundColor:'#0F172A'}}>
       {/* Left Section */}
       <div className='flex-1 mb-8 md:mb-0 md:mr-10'>
         <p className='font-bold text-2xl mb-2'>GIGUPP</p>
@@ -14,8 +14,8 @@ const Footer = () => {
           From campus to Clients, start your <br />freelance journey today.
         </p>
         <span className='bg-white rounded-lg flex items-center p-2 mb-4'>
-          <input type="text" placeholder='Search for Gigs' className='text-black px-2 py-1 rounded-l-lg w-full focus:outline-none'/>
-          <button className='btn text-white bg-orange-400 px-3 rounded-r-lg'>Search</button>
+          <input type="text" placeholder='Search for Gigs' className='text-black px-2 py-1 rounded-l-lg w-full focus:outline-none' />
+          <button className='btn text-white  px-3 rounded-r-lg' style={{backgroundColor:'#FF790C'}} >Search</button>
         </span>
         <div className='flex flex-wrap gap-4 mb-4'>
           <p className='hover:text-orange-400 cursor-pointer'>About</p>
