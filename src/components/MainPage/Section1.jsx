@@ -173,7 +173,7 @@ const Section1 = memo(() => {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className="w-60  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
+              className="w-50  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
               style={{
                 left: `${offset}px`,
                 zIndex: isActive ? 30 : img.z,
