@@ -38,7 +38,7 @@ const ImageSlider = () => {
   const handleCardClick = useCallback((idx) => setActiveIdx(idx), []);
 
   return (
-    <div className="md:flex justify-center items-center mt-10 min-h-[500px] hidden ">
+    <section className="md:flex justify-center items-center mt-10 min-h-[500px] hidden" aria-label="Image Slider">
       <div className="relative flex w-full max-w-5xl justify-center items-center">
         {cards.map((card, idx) => {
           const isActive = idx === activeIdx;
@@ -65,7 +65,7 @@ const ImageSlider = () => {
               onClick={() => handleCardClick(idx)}
             >
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-[320px] h-[400px] flex flex-col relative">
-                <img src={card.img} alt={card.title} className="w-full h-[220px] object-cover" />
+                <img src={card.img} alt={card.title} loading="lazy" className="w-full h-[220px] object-cover" />
                 <div className="p-5 flex flex-col gap-2">
                   <h2 className="text-orange-500 font-bold text-lg">{card.subtitle}</h2>
                   <div className="flex flex-row items-center justify-between">
@@ -108,7 +108,7 @@ const ImageSlider = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

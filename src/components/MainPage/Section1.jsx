@@ -17,9 +17,9 @@ const Section1 = memo(() => {
   }, []);
 
   return (
-    <div>
-    <div className='  hidden  text-white md:text-4xl  md:flex flex-row p-5 items-start' style={{backgroundColor:'#FF790C'}}>
-    <div className=' text-white text-xl md:text-4xl p-2 mx-10  w-1/2  ' style={{backgroundColor:'#FF790C'}}>
+    <section>
+    <div className='hidden md:flex flex-row p-5 items-start text-white md:text-4xl' style={{backgroundColor:'#FF790C'}}>
+    <div className='text-white text-xl md:text-4xl p-2 mx-10 w-1/2' style={{backgroundColor:'#FF790C'}}>
       
 
 
@@ -121,7 +121,8 @@ const Section1 = memo(() => {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className="w-60  h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer "
+              loading="lazy"
+              className="w-60 h-100 md:w-70 md:h-120 absolute rounded-xl shadow-lg shadow-gray-800 cursor-pointer"
               style={{
                 left: `${offset}px`,
                 zIndex: isActive ? 30 : img.z,
@@ -145,8 +146,7 @@ const Section1 = memo(() => {
 
     </div>
 
-   <div>
-    <div className="md:hidden bg-amber-600 text-white text-2xl p-5">
+   <div className="md:hidden bg-amber-600 text-white text-2xl p-5">
       <h1 className="font-semibold p-4">
         Turn your skills into real, world experience on right from campus.
 
@@ -157,16 +157,14 @@ const Section1 = memo(() => {
       <div className='mx-5'>
 
       
-      <span className='bg-white m-5 mt-5 ml-5 rounded-lg w-full  flex items-center p-2 mb-4  mr-20 transform -translate-x-5'>
-          <input type="text" placeholder='Search for Gigs' className='text-black text-sm px-2 py-1 rounded-l-lg w-full  focus:outline-none'/>
-          <button className='btn text-white  rounded-r-lg px-5' style={{backgroundColor:'#0F172A'}}>Search</button>
+      <span className='bg-white m-5 mt-5 ml-5 rounded-lg w-full flex items-center p-2 mb-4 mr-20 transform -translate-x-5'>
+          <input type="text" placeholder='Search for Gigs' className='text-black text-sm px-2 py-1 rounded-l-lg w-full focus:outline-none'/>
+          <button className='btn text-white rounded-r-lg px-5' style={{backgroundColor:'#0F172A'}}>Search</button>
         </span>
         </div>
         
     </div>
-   </div>
-
-    </div>
+    </section>
   )
 })
 
