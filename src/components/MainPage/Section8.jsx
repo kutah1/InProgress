@@ -1,4 +1,4 @@
-import Red from '../assets/images/ChatFeature.jpg'
+import Red from '../../assets/images/ChatFeature.jpg'
 import { HiOutlineChatAlt2 } from "react-icons/hi";
 
 import { FaRegCheckCircle } from "react-icons/fa";

@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
-import SoftLife from '../assets/images/SoftLife.jpg'
+import SoftLife from '../../assets/images/SoftLife.jpg'
 import { FaRegCheckCircle } from "react-icons/fa";
-const Section4 = memo(() => {
+const Section2 = memo(() => {
   const cardData = [
     {
       title: "Access to Diverse, Vetted Talent",
@@ -75,4 +75,4 @@ const Section4 = memo(() => {
   )
 })
 
-export default Section4
+export default Section2

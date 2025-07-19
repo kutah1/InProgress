@@ -1,21 +1,20 @@
 import React from 'react'
-import Section1 from './Section1'
-import Section2 from './Section2'
-import Section3 from './Section3'
-import Section4 from './Section4'
-import Section5 from './Section5'
-import Section8 from './Section8'
-import ImageSlider from './ImageSlider'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Section1 from './MainPage/Section1'
+import Section2 from './MainPage/Section2'
+import Section3 from './MainPage/Section3'
+import Section4 from './MainPage/Section4'
+import Section5 from './MainPage/Section5'
+import Section8 from './MainPage/Section8'
+import ImageSlider from './MainPage/ImageSlider'
+import Navbar from './MainPage/Navbar'
+import Footer from './MainPage/Footer'
+
 const HomePage = () => {
   return (
     <>
   <Navbar/>
 <Section1/>
 <ImageSlider/>
-
-
 <Section2/>
 <Section3/>
 <Section4/>

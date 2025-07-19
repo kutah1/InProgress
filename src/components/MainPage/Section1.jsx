@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useState, useMemo, useCallback, memo } from "react";
-import Red from '../assets/images/PCandDayLight.jpg'
-import Yellow from '../assets/images/PCandNighLight.jpg'
-import Green from '../assets/images/PCandHands.jpg'
+import Red from '../../assets/images/PCandDayLight.jpg'
+import Yellow from '../../assets/images/PCandNighLight.jpg'
+import Green from '../../assets/images/PCandHands.jpg'
 
 const Section1 = memo(() => {
   const images = useMemo(() => [
@@ -143,7 +143,7 @@ const Section1 = memo(() => {
   </div>
         </div>
 
-
+      
 
     </div>
   )

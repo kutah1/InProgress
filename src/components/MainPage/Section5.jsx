@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiTarget } from "react-icons/fi";
 import { RxCountdownTimer } from "react-icons/rx";
-import Red from '../assets/images/red.png'
+import Red from '../../assets/images/red.png'
 const Section5 = () => {
   return (
 
