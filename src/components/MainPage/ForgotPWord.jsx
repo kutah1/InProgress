@@ -3,18 +3,18 @@ import { FcGoogle } from "react-icons/fc";
 
 const  ForgotPWord = () => {
   return (
-    <div className='text-center  flex justify-center p-10' >
+    <div className='text-center  text-xs sm:text-lg flex justify-center p-10' >
     
       <div className=' flex justify center  bg-white p-10  w-[500px] shadow-lg shadow-gray-600 rounded-xl items-center  text-center place-items-center mt-10'>
         <div  > 
         
            
             <div className='text-sm'>
-            <h1 className=' text-orange-500 text-2xl text-center font-semibold '>
+            <h1 className=' text-orange-500 text-lg sm:text-lg  text-center font-semibold '>
               Create a New Password
             </h1>
-            <div className='text-center m-5'>
-                Don't worry it happens. Just enter <br/>
+            <div className='sm:text-center text-left sm:m-5 mt-4 mb-4 '>
+                Don't worry it happens. Just enter <br className='hidden sm:block'/>
                 the email relate to this account
 
                 </div>
@@ -35,7 +35,7 @@ const  ForgotPWord = () => {
 
 
                 </h2>
-                <ul className=''>
+                <ul className='text-xs sm:text-lg'>
                     <li>
                         Minimum 6 characters
                     </li>

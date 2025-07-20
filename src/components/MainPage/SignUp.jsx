@@ -42,11 +42,21 @@ const SignUp = () => {
                 <button className='mt-5 text-white bg-orange-500 px-4 w-full rounded-lg p-2'>Save</button>
              
                     
-                    <div className='flex gap-2 justify-center mt-5 text-center'>
-                        @Copyright 2025. All Rights Reserved by GigUpp
+                    <div className=' gap-2 hidden sm:block font-semibold justify-center sm:text-lg mt-5 text-center text-xs'>
+                        @Copyright 2025.
+                        <span className='sm:hidden flex flex-row'></span> All Rights Reserved by GigUpp
                         <Link to="/login">
-                        <p className='text-orange-400'>
-                            Sign  in
+                        <p className='text-orange-400 flex justify-center'>
+                            Sign <span className='ml-1 sm:hidden text-center'></span> in
+                        </p>
+                        </Link>
+                    </div>
+                    <div className=' gap-2  sm:hidden font-semibold justify-center sm:text-lg mt-5 text-center text-xs'>
+                        @Copyright 2025.
+                        <span className='sm:hidden flex flex-row'></span> All Rights Reserved by GigUpp
+                        <Link to="/login">
+                        <p className='text-orange-400 text-center mt-5 text-lg'>
+                            Sign <span className='ml-0 sm:hidden'></span> in
                         </p>
                         </Link>
                     </div>

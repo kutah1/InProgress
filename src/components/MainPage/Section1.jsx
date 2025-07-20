@@ -17,9 +17,9 @@ const Section1 = memo(() => {
   }, []);
 
   return (
-    <section>
-    <div className='hidden md:flex flex-row p-5 items-start text-white md:text-4xl' style={{backgroundColor:'#FF790C'}}>
-    <div className='text-white text-xl md:text-4xl p-2 mx-10 w-1/2' style={{backgroundColor:'#FF790C'}}>
+    <>
+    <div className='hidden md:flex flex-row p-5 items-start text-white md:text-4xl ' style={{backgroundColor:'#FF790C'}}>
+    <div className='text-white   text-xl md:text-4xl p-2 mx-20 w-1/2' style={{backgroundColor:'#FF790C'}}>
       
 
 
@@ -164,7 +164,7 @@ const Section1 = memo(() => {
         </div>
         
     </div>
-    </section>
+    </>
   )
 })
 

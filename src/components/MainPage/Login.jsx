@@ -35,17 +35,17 @@ const Login = () => {
             <div>
                 <div className="flex flex-row gap-10 items-center justify-between">
                     
-                    <p className='flex m-5'>
+                    <p className='flex items-center m-5 sm:text-lg mt-5 text-center text-xs'>
                      <input type="checkbox" name="" id="" className='mx-2'/>
-                     <p>
-                        Remember Me
+                     <p className='flex '>
+                        Remember  <span className='ml-1 sm:ml-2'></span> Me
                      </p>
 
                         </p>
                         <Link to="/password">
                        
-                     <p className='text-red-600 text-xs sm:text-sm  text-right'>
-                        Forgot password?
+                     <p className='text-red-600 flex text-xs sm:text-lg  text-right'>
+                        Forgot <span className='ml-1 sm:ml-2'></span>password?
                      </p>
                       </Link>
                 </div>
@@ -55,7 +55,7 @@ const Login = () => {
                     <FcGoogle  className='text-xl'/> 
                     </button>
                     
-                    <div className='flex gap-2 justify-center mt-5 text-center'>Already have an account?
+                    <div className='flex gap-2 justify-center mt-5 text-center sm:text-lg text-xs'>Already have an account?
                         <p className='text-orange-400'>
                             Sign  in
                         </p>
