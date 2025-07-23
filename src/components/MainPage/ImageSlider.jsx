@@ -98,16 +98,7 @@ const ImageSlider = () => {
         })}
       </div>
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-row gap-3">
-        {cards.map((_, idx) => (
-          <button
-            key={idx}
-            className={`w-3 h-3 rounded-full transition-all ${activeIdx === idx ? "bg-orange-500 scale-125" : "bg-gray-300"}`}
-            onClick={() => setActiveIdx(idx)}
-            aria-label={`Go to card ${idx + 1}`}
-          />
-        ))}
-      </div>
+    
     </section>
   );
 };

@@ -7,7 +7,8 @@ import Section8 from './MainPage/Section8'
 import ImageSlider from './MainPage/ImageSlider'
 import Navbar from './MainPage/Navbar'
 import Footer from './MainPage/Footer'
-
+import Section6 from './MainPage/Section6'
+import Section21 from './MainPage/Section21'
 const HomePage = () => {
   return (
     <>
@@ -15,8 +16,10 @@ const HomePage = () => {
 <Section1/>
 <ImageSlider/>
 <Section2/>
+<Section21/>
 <Section3/>
 <Section4/>
+<Section6/>
 
 <Section8/>
 <Footer/> 
