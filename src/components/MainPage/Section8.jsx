@@ -44,7 +44,7 @@ const Section8 = () => {
     </div>
     <div className=''>
     
-         <img src={Red} alt='' className=' transform -translate-y-10'/>
+         <img src={Red} alt='' className=' transform -translate-y-7'/>
 
 
         </div>
