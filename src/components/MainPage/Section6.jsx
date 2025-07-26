@@ -16,7 +16,7 @@ const Section6 = memo(() => {
     {
       id: 1,
       content: (
-        <div className="text-white text-lg p-4">
+        <div className="text-white text-lg p-4 ">
           <h2 className="font-bold text-xl mb-2">Browse Gigs Easily</h2>
           <p>Explore a wide range of verified gigs offered by real clients and lecturers.</p>
         </div>
@@ -64,7 +64,7 @@ const Section6 = memo(() => {
   const slide = slides[index];
 
   return (
-    <section className="bg-black py-10 px-4 md:px-16 w-full relative overflow-hidden">
+    <section className="bg-[#0F172A] py-10 px-4 plus-jakarta-sans md:px-16 w-full relative overflow-hidden">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="font-bold text-white text-2xl md:text-3xl mb-2">Let's see how it works</h1>
@@ -105,7 +105,7 @@ const Section6 = memo(() => {
               loading="lazy"
             />
             {/* Overlay Info */}
-            <div className="absolute bottom-4 left-4 bg-gray-600 p-3 transform md:translate-x-10 rounded-lg text-white backdrop-blur-md">
+            <div className="absolute bottom-4 left-4 bg-[#0F172A] p-3 transform md:translate-x-10 rounded-lg text-white backdrop-blur-md">
               
               <p className="font-semibold text-sm ">{slide.name}</p>
               <p className="text-xs text-gray-300">{slide.role}</p>
@@ -113,7 +113,7 @@ const Section6 = memo(() => {
                 {Array(5)
                   .fill(0)
                   .map((_, i) => (
-                    <FaStar key={i} className="text-orange-500  text-sm" />
+                    <FaStar key={i} className="text-[#FF790C]  text-sm" />
                   ))}
               </div>
             </div>
@@ -125,14 +125,14 @@ const Section6 = memo(() => {
       <div className="flex justify-center gap-6 mt-10">
         <button
           onClick={prevSlide}
-          className="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition"
+          className="bg-white text-[#0F172A] p-3 rounded-full shadow-lg hover:bg-gray-200 transition"
           aria-label="Previous Slide"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition"
+          className="bg-white text-[#0F172A] p-3 rounded-full shadow-lg hover:bg-gray-200 transition"
           aria-label="Next Slide"
         >
           <FaArrowRight />

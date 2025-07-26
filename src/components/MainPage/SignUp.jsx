@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc";
 const SignUp = () => {
   return (
-    <div className='text-center from-white via-white to-orange-500 bg-gradient-to-r flex justify-center p-10' >
+    <div className='text-center plus-jakarta-sans from-white via-white to-orange-500 bg-gradient-to-r flex justify-center p-10' >
     
       <div className='bg-white p-10  md:w-[900px]  rounded-xl items-center shadow-lg shadow-gray-700  text-center place-items-center  flex justify-center'>
         <div  > 
            
         
             <div className='text-sm'>
-            <h1 className='text-2xl text-left font-semibold text-black'>
+            <h1 className='text-2xl text-left font-semibold text-[#0F172A]'>
                 Profile Information
             </h1>
             
@@ -39,14 +39,14 @@ const SignUp = () => {
                     
                     
                 </div>
-                <button className='mt-5 text-white bg-orange-500 px-4 w-full rounded-lg p-2'>Save</button>
+                <button className='mt-5 text-white bg-[#FF790C] px-4 w-full rounded-lg p-2'>Save</button>
              
                     
                     <div className=' gap-2 hidden sm:block font-semibold justify-center sm:text-lg mt-5 text-center text-xs'>
                         @Copyright 2025.
                         <span className='sm:hidden flex flex-row'></span> All Rights Reserved by GigUpp
                         <Link to="/login">
-                        <p className='text-orange-400 flex justify-center'>
+                        <p className='text-[#FF790C] flex justify-center'>
                             Sign <span className='ml-1 sm:hidden text-center'></span> in
                         </p>
                         </Link>
@@ -55,7 +55,7 @@ const SignUp = () => {
                         @Copyright 2025.
                         <span className='sm:hidden flex flex-row'></span> All Rights Reserved by GigUpp
                         <Link to="/login">
-                        <p className='text-orange-400 text-center mt-5 text-lg'>
+                        <p className='text-[#FF790C] text-center mt-5 text-lg'>
                             Sign <span className='ml-0 sm:hidden'></span> in
                         </p>
                         </Link>

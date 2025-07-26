@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=WDXL+Lubrifont+TC&display=swap');
+
+
 @layer components {
   .btn {
     @apply rounded-lg px-4 py-2 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 md:w-[80px] md:h-[40px];
   }
+ 
 }
 
 /* Responsive utility classes for custom widths/heights */
@@ -14,6 +18,13 @@
   .md\:w-half {
     @media (min-width: 768px) {
       width: 50%;
+      
     }
+      
   }
+  .plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+
 }

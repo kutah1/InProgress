@@ -19,16 +19,16 @@ const Section1 = memo(() => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row p-5 items-start text-white text-xl md:text-4xl bg-[#FF790C] overflow-hidden">
+      <div className="flex flex-col plus-jakarta-sans md:flex-row p-5 items-start text-white text-xl md:text-4xl bg-gradient-to-br -bg-linear-180 from-[#FF790C] to-[#D0650D]    ">
         {/* Left Section */}
-        <div className="w-full md:w-1/2 px-4 md:px-20">
-          <div className="mt-5 font-semibold">
+        <div className=" px-4  ml-10 ">
+          <div className="mt-5 font-semibold text-4xl ">
             Turn your skills into <br />
             real, world <br />
-            experience right from campus.
+            experience right  <br/>from campus.
           </div>
 
-          <div className="text-sm md:text-xl mt-5 md:ml-2">
+          <div className="text-sm md:text-xl mt-5  ">
             GigUpp helps students earn and grow by <br />
             offering Talent Gigs and Lecturer-Featured <br />
             gigs, locally and nationwide.
@@ -38,15 +38,15 @@ const Section1 = memo(() => {
             <input
               type="text"
               placeholder="Search for Gigs"
-              className="text-black text-sm px-2 py-1 rounded-l-lg w-full focus:outline-none"
+              className="text-[#0F172A] text-sm px-2 py-1 rounded-l-lg w-full focus:outline-none"
             />
-            <button className="text-white px-4 py-2  text-xl rounded-r-lg bg-[#0F172A]">
+            <button className="text-white px-6 py-2  text-xl  rounded-lg bg-[#0F172A]">
               Search
             </button>
           </div>
 
           {/* Stats */}
-          <div className="flex flex-row  md:flex-row text-black gap-6 mt-10">
+          <div className="flex flex-row  md:flex-row text-[#0F172A] gap-6 mt-10">
             <div className="flex items-center gap-2">
               <p className="text-4xl">2943</p>
               <FaPlus className="text-xl mt-2" />
@@ -66,15 +66,21 @@ const Section1 = memo(() => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row text-xl gap-4 mt-10">
-            <button className="rounded-lg px-4 p-2 text-white bg-[#0F172A] w-full  md:w-1/2">
-              View as a student
+          <div className="flex flex-col md:flex-row font-light text-xl  gap-23 mt-10">
+            <button className="rounded-xl px-8 p-2  h-[65px]  text-white bg-[#0F172A]   ">
+
+            
+              Verify as 
+                a student
             </button>
-            <button className="rounded-lg px-4 py-2 text-gray-800 bg-white w-full md:w-1/2">
+            <button className="rounded-xl px-8 py-2 text-[#0F172A] h-[65px]  bg-white p-2 ">
               Browse Gigs
             </button>
           </div>
         </div>
+
+  
+
 
         {/* Right Section (Image Carousel) */}
         <div className="flex w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
@@ -104,15 +110,22 @@ const Section1 = memo(() => {
         src={img.src}
         alt={img.alt}
         loading="lazy"
-        className="w-full h-full object-cover"
+        className="w-full relative h-full object-cover"
       />
+    
     </motion.div>
   );
 })}
 
+   
           </div>
+         
         </div>
+          
+    
+
       </div>
+   
     </>
   );
 });

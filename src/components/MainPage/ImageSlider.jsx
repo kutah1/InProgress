@@ -1,33 +1,34 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import Red from '../../assets/images/PCandDayLight.jpg';
-import { GoStarFill } from "react-icons/go";
+import Olivia from '../../assets/images/Olivia.png'
+import Chair from '../../assets/images/chair.jpg';
+import { GoStarFill } from 'react-icons/go';
 
 const cards = [
   {
-    img: Red,
-    title: 'Talent Gig',
-    subtitle: 'Talent Gig',
-    description: 'Browse your website traffic with engaging SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
-    host: 'Olivia Shye',
+    img: Chair,
+    title: 'SEO Blog Writing',
+    subtitle: 'Talent gig',
+    description: 'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
+    host: 'Olivia Rhye',
     rating: 4.9,
     button: 'Order',
   },
   {
-    img: Red,
-    title: 'Talent Gig',
-    subtitle: 'Talent Gig',
-    description: 'Browse your website traffic with engaging SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
-    host: 'Olivia Shye',
+    img: Chair,
+    title: 'SEO Blog Writing',
+    subtitle: 'Talent gig',
+    description: 'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
+    host: 'Olivia Rhye',
     rating: 4.9,
     button: 'Order',
   },
   {
-    img: Red,
-    title: 'Talent Gig',
-    subtitle: 'Talent Gig',
-    description: 'Browse your website traffic with engaging SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
-    host: 'Olivia Shye',
+    img: Chair,
+    title: 'SEO Blog Writing',
+    subtitle: 'Talent gig',
+    description: 'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked.',
+    host: 'Olivia Rhye',
     rating: 4.9,
     button: 'Order',
   },
@@ -38,15 +39,31 @@ const ImageSlider = () => {
   const handleCardClick = useCallback((idx) => setActiveIdx(idx), []);
 
   return (
+    <>
+    <div className='ml-30 mt-10'>
+       <h1 className='font-semibold text-5xl'>
+        Popular Gigs Near Kumasi
+
+    </h1>
+    <p className='mt-3'>
+      We love using GigUPP! Finding the right freelancers here is easy.
+      <br/>
+      and the quality of work always matches exactly what we're 
+      <br/>
+      looking for.
+    </p>
+
+    </div>
+   
     <section className="md:flex justify-center items-center mt-10 min-h-[500px] hidden" aria-label="Image Slider">
-      <div className="relative flex w-full max-w-5xl justify-center items-center">
+      <div className="relative flex w-full max-w-6xl justify-center items-center">
         {cards.map((card, idx) => {
           const isActive = idx === activeIdx;
-          let scale = isActive ? 1.1 : 0.85;
-          let opacity = isActive ? 1 : 0.5;
-          let brightness = isActive ? '100%' : '80%';
-          let zIndex = isActive ? 30 : 10;
-          let translateX = (idx - activeIdx) * 260;
+          const scale = isActive ? 1.1 : 0.85;
+          const opacity = isActive ? 1 : 0.4;
+          const zIndex = isActive ? 30 : 10;
+          const translateX = (idx - activeIdx) * 300;
+
           return (
             <motion.div
               key={idx}
@@ -56,38 +73,40 @@ const ImageSlider = () => {
                 transform: `translateX(${translateX}px) translateX(-50%) scale(${scale})`,
                 zIndex,
                 opacity,
-                filter: `brightness(${brightness})`,
                 transition: 'all 0.5s cubic-bezier(.4,0,.2,1)',
-                boxShadow: isActive
-                  ? '0 12px 32px rgba(0,0,0,0.18)'
-                  : '0 2px 8px rgba(0,0,0,0.08)',
               }}
               onClick={() => handleCardClick(idx)}
             >
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-[320px] h-[400px] flex flex-col relative">
-                <img src={card.img} alt={card.title} loading="lazy" className="w-full h-[220px] object-cover" />
+              <div
+                className={`bg-white rounded-2xl overflow-hidden w-[320px] h-[520px] flex flex-col relative border-2 ${
+                  isActive ? 'border-[#FF790C]' : 'border-transparent'
+                } shadow-xl`}
+              >
+                <img src={card.img} alt={card.title} className="w-full h-[200px] p-4   object-cover" />
                 <div className="p-5 flex flex-col gap-2">
-                  <h2 className="text-orange-500 font-bold text-lg">{card.subtitle}</h2>
-                  <div className="flex flex-row items-center justify-between">
-                    <h2 className="font-semibold text-gray-800">{card.title}</h2>
-                    <button className="px-6 bg-orange-400 text-white rounded p-2">Pro</button>
+                  <span className="text-[#FF790C] text-sm font-semibold uppercase">{card.subtitle}</span>
+                  <div className="flex justify-between items-center">
+                    <h2 className="text-[#0F172A] font-bold text-lg">{card.title}</h2>
+                    <span className="bg-[#FF790C] text-white text-sm px-3 py-1 rounded font-semibold">Pro</span>
                   </div>
-                  <div className="text-gray-600 text-sm mb-2">{card.description}</div>
-                  <div className="flex flex-row items-center mt-2">
-                    <div className="bg-black rounded-full w-10 h-10 flex items-center justify-center mr-2">
-                      <span className="text-white text-xs font-semibold">{card.host.charAt(0)}</span>
+                  <p className="text-sm text-[#0F172A] mt-1">{card.description}</p>
+                  <div className="flex items-center gap-3 mt-3">
+                    <div className="w-10 h-10 rounded-full bg-[#C7B9DA] flex items-center justify-center">
+                      <img src={Olivia} alt=""className='w-10 h-10 rounded-full' />
+
                     </div>
                     <div>
-                      <div className="flex flex-row items-center ml-2">
-                        <h1 className="font-semibold text-gray-800 mr-2">{card.host}</h1>
+                      <h3 className="text-[#0F172A] font-semibold">
+                        {card.host}</h3>
+                      <div className="flex mt-1">
                         {[...Array(3)].map((_, i) => (
-                          <GoStarFill key={i} className="w-5 h-5 text-orange-500 mx-1" />
+                          <GoStarFill key={i} className="text-[#FF790C] w-4 h-4 mr-1" />
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="text-center mt-4">
-                    <button className="text-white w-40 rounded-lg px-8 py-3 bg-orange-500 hover:bg-orange-600 transition">
+                  <div className="mt-4 text-center">
+                    <button className="bg-[#FF790C] text-white rounded-lg  px-10 py-3 text-sm font-medium hover:bg-[#FF790C]/90 transition">
                       {card.button}
                     </button>
                   </div>
@@ -97,9 +116,8 @@ const ImageSlider = () => {
           );
         })}
       </div>
-      {/* Navigation Dots */}
-    
     </section>
+    </>
   );
 };
 

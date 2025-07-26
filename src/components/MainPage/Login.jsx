@@ -3,17 +3,17 @@ import { FcGoogle } from "react-icons/fc";
 import {Link} from 'react-router-dom'
 const Login = () => {
   return (
-    <div className='text-center from-black via-black to-orange-300 bg-gradient-to-r flex justify-center p-10' >
+    <div className='text-center plus-jakarta-sans from-black via-black to-[#FF790C] bg-gradient-to-r flex justify-center p-10 h-full' >
     
-      <div className='bg-white p-10  w-[500px] border-3 rounded-xl items-center  text-center place-items-center flex justify-center'>
+      <div className='bg-white p-10 h-[600px]  w-[550px] border-3 rounded-xl items-center  text-center place-items-center flex justify-center'>
         <div  > 
             <div >
-                        <h1 className=''>GIGUPP</h1>
+                        <h1 className='p-4'>GIGUPP</h1>
                           <h2>Connecting Skills to Success</h2>
             </div>
         
             <div className='text-sm'>
-            <h1 className='text-2xl text-center font-semibold text-black'>
+            <h1 className='text-2xl text-center font-semibold text-[#0F172A]'>
                 Get Started
             </h1>
             <p>
@@ -49,17 +49,13 @@ const Login = () => {
                      </p>
                       </Link>
                 </div>
-                <button className='text-white bg-orange-500 px-4 w-full rounded-lg p-2'>SignUp</button>
-                 <button className='text-black border-orange-500 mt-5 border-2 px-4 w-full rounded-lg p-2 flex items-center justify-center gap-3'>SignUp with Google
+                <button className='text-white bg-[#FF790C] px-4 w-full rounded-lg p-2'>SignUp</button>
+                 <button className='text-[#0F172A] border-[#FF790C]  mt-5 border-2 px-4 w-full rounded-lg p-2 flex items-center justify-center gap-3'>SignUp with Google
                     
                     <FcGoogle  className='text-xl'/> 
                     </button>
                     
-                    <div className='flex gap-2 justify-center mt-5 text-center sm:text-lg text-xs'>Already have an account?
-                        <p className='text-orange-400'>
-                            Sign  in
-                        </p>
-                    </div>
+                    
 
             </div>
         </div>

@@ -3,14 +3,14 @@ import { FcGoogle } from "react-icons/fc";
 
 const  ForgotPWord = () => {
   return (
-    <div className='text-center  text-xs sm:text-lg flex justify-center p-10' >
+    <div className='text-center plus-jakarta-sans  text-xs sm:text-lg flex justify-center p-10' >
     
       <div className=' flex justify center  bg-white p-10  w-[500px] shadow-lg shadow-gray-600 rounded-xl items-center  text-center place-items-center mt-10'>
         <div  > 
         
            
             <div className='text-sm'>
-            <h1 className=' text-orange-500 text-lg sm:text-lg  text-center font-semibold '>
+            <h1 className=' text-[#FF790C] text-lg sm:text-lg  text-center font-semibold '>
               Create a New Password
             </h1>
             <div className='sm:text-center text-left sm:m-5 mt-4 mb-4 '>
@@ -45,7 +45,7 @@ const  ForgotPWord = () => {
                 </ul>
               </div>
 
-                 <button className=' bg-orange-500 text-white mt-5 border-2 px-4 w-full rounded-lg p-2 flex items-center justify-center gap-3'>
+                 <button className=' bg-[#FF790C] text-white mt-5 border-2 px-4 w-full rounded-lg p-2 flex items-center justify-center gap-3'>
                   Continue
                     
                     </button>

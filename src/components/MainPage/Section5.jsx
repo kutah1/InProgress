@@ -6,7 +6,7 @@ const Section5 = () => {
   return (
 
     <> 
-    <div className='m-10 mt-10 text-center hidden md:block  '>
+    <div className='m-10 mt-10 text-center hidden md:block plus-jakarta-sans  '>
   
       <div className='m-10 text-center'>
 
@@ -21,7 +21,7 @@ const Section5 = () => {
         <div className="mx-10 gap-8 mt-10">
           <div className="flex flex-row items-start justify-center text-left">
             <div className="flex flex-col items-center w-1/4">
-              <FiTarget className="w-16 h-16 rounded-full bg-orange-500 border-orange-400 border-8 mb-2" />
+              <FiTarget className="w-16 h-16 rounded-full bg-[#FF790C] border-[#FF790C] border-8 mb-2" />
               <span className="font-bold text-lg mt-2">Mission Statement</span>
             </div>
             <div className="ml-10 w-3/4">
@@ -34,7 +34,7 @@ const Section5 = () => {
 
           <div className="flex flex-row items-start mt-12 justify-center text-left">
             <div className="flex flex-col items-center w-1/4">
-              <RxCountdownTimer className="w-16 h-16 rounded-full bg-orange-500 border-orange-400 border-8 mb-2" />
+              <RxCountdownTimer className="w-16 h-16 rounded-full bg-[#FF790C] border-[#FF790C] border-8 mb-2" />
               <span className="font-bold text-lg mt-2">Vision Statement</span>
             </div>
             <div className="ml-10 w-3/4">

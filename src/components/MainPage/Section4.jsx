@@ -46,13 +46,13 @@ const Section4 = memo(() => {
   return (
     <div >
 
-    <div className='flex flex-col justify-center items-center text-black p-2 sm:p-4 md:p-8'>
-          <h1 className='text-orange-400   items-start  text-center mr-10  md:-translate-x-15 text-2xl sm:text-3xl md:text-4xl font-semibold  sm:ml-5 my-6 sm:my-10 '>
+    <div className='flex flex-col justify-center plus-jakarta-sans items-center text-[#0F172A] p-2 sm:p-4 md:p-8'>
+          <h1 className='text-[#FF790C]   items-start  text-center mr-10  md:-translate-x-15 text-2xl sm:text-3xl md:text-4xl font-semibold  sm:ml-5 my-6 sm:my-10 '>
             Why Students Use GigUpp</h1>
 
       <img src={SoftLife} alt="" className='rounded-lg md:h-5xl  md:w-4xl w-full mx-2 sm:mx-5' />
       <div>
-        <h2 className='text-center my-6 sm:my-10 text-xl sm:text-2xl md:text-4xl font-semibold text-orange-400 mb-6 sm:mb-10'>
+        <h2 className='text-center my-6 sm:my-10 text-xl sm:text-2xl md:text-4xl font-semibold text-[#FF790C] mb-6 sm:mb-10'>
            These aren't just students, they're future professionals gaining <br/>
            real experience and ready to impress.
         </h2>
@@ -61,7 +61,7 @@ const Section4 = memo(() => {
           {cardData.map((card, idx) => (
             <div key={idx} className='flex flex-row shadow-sm shadow-gray-500 rounded-lg m-1 sm:m-2 p-2 sm:p-4 w-full md:w-11/12 bg-white'>
               <p>
-                <FaRegCheckCircle className='h-6 w-6 sm:h-7 sm:w-7 mx-2 sm:mx-4 text-orange-400' />
+                <FaRegCheckCircle className='h-6 w-6 sm:h-7 sm:w-7 mx-2 sm:mx-4 text-[#FF790C]' />
               </p>
               <div>
                 <h1 className='font-semibold text-base sm:text-lg md:text-xl mb-1'>{card.title}</h1>
