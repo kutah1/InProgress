@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import {Link} from 'react-router-dom'
 const Login = () => {
   return (
-    <div className='text-center plus-jakarta-sans from-black via-black to-[#FF790C] bg-gradient-to-r flex justify-center p-10 h-full' >
+    <div className='text-center plus-jakarta-sans from-black via-black to-[#FF790C] bg-gradient-to-r flex justify-center p-10 h-full'style={{height:'100%'}} >
     
       <div className='bg-white p-10 h-[600px]  w-[550px] border-3 rounded-xl items-center  text-center place-items-center flex justify-center'>
         <div  > 

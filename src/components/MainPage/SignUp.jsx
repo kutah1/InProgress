@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc";
 const SignUp = () => {
   return (
-    <div className='text-center plus-jakarta-sans from-white via-white to-orange-500 bg-gradient-to-r flex justify-center p-10' >
+    <div className='text-center plus-jakarta-sans from-white via-white to-orange-500 bg-gradient-to-r flex justify-center p-10' style={{height:'100%'}} >
     
       <div className='bg-white p-10  md:w-[900px]  rounded-xl items-center shadow-lg shadow-gray-700  text-center place-items-center  flex justify-center'>
         <div  > 
