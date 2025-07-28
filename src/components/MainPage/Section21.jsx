@@ -15,7 +15,7 @@ const cardVariants = {
 const Section21 = () => {
   return (
     <section className="w-full min-h-50 bg-gradient-to-b from-[#0c0d24] plus-jakarta-sans to-[#14162e] text-white flex flex-col items-center justify-center p-4 sm:p-6">
-      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-center">Gigupp</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-left m-5">Gigupp</h1>
 
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-8">
         {/* Card 1 */}

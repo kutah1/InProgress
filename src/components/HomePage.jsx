@@ -15,9 +15,11 @@ const HomePage = () => {
   <Navbar/>
 <Section1/>
 <ImageSlider/>
-<Section2/>
-<Section21/>
 <Section3/>
+<Section2/>
+
+<Section21/>
+
 <Section4/>
 <Section6/>
 

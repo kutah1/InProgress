@@ -5,7 +5,7 @@ import Red from '../../assets/images/YellowShirt.jpg'
 
 const Section3 = memo(() => {
   return (
-    <section className=" bg-[#0F172A] py-10 px-4 plus-jakarta-sans md:px-16 w-full">
+    <section className="mt-15 bg-[#0F172A] py-10 px-4 plus-jakarta-sans md:px-16 w-full">
         <div className='text-center '>
           <h1 className="font-bold text-white text-2xl md:text-3xl mb-2">Let's see how it works</h1>
           <h2 className="text-sm text-gray-200 mb-6">Whether you're a student or a client, getting started on GigUpp is simple.</h2>
