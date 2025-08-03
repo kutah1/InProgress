@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import ChatBot from '../../assets/images/chatbot.png'
 import Cards from './Cards'
-import Red from '../../assets/images/YellowShirt.jpg'
+import YellowShirt from '../../assets/images/YellowShirt.jpg'
 
 const Section3 = memo(() => {
   return (
@@ -16,7 +16,7 @@ const Section3 = memo(() => {
       
         <div className="flex flex-col border-[#FF790C] border-l-amber-100 items-center justify-center">
             
-          <img src={Red} alt="Red" className=" md:w-6xl mx-10 md:h-2xl  rounded-xl object-cover " />
+          <img src={YellowShirt} alt="Yellow Shirt" className=" md:w-6xl mx-10 md:h-2xl  rounded-xl object-cover " />
         </div>
         {/* Card Column */}
         <div className='flex flex-col justify-center items-center text-[#0F172A] p-2 sm:p-4 md:p-8'>

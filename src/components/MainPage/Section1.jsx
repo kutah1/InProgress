@@ -6,17 +6,14 @@ import Yellow from '../../assets/images/PCandNighLight.jpg';
 import Green from '../../assets/images/PCandHands.jpg';
 
 const Section1 = memo(() => {
-  // Static image list with z-index configuration
   const images = useMemo(() => [
     { src: Red, alt: "Red", z: 20 },
     { src: Yellow, alt: "Yellow", z: 20 },
     { src: Green, alt: "Green", z: 15 },
   ], []);
 
-  // Track which image is currently active (scaled and on top)
   const [activeIdx, setActiveIdx] = useState(0);
 
-  // Handle switching active image on click
   const handleImageClick = useCallback((idx) => {
     setActiveIdx(idx);
   }, []);
@@ -24,8 +21,8 @@ const Section1 = memo(() => {
   return (
     <div className="flex flex-col plus-jakarta-sans md:flex-row p-5 items-start text-white text-xl md:text-4xl bg-gradient-to-br -bg-linear-180 from-[#FF790C] to-[#D0650D]">
       
-      {/* Left Section – No changes needed here */}
-      <div className="px-4  md:m-5 md:ml-20">
+      {/* Left Section */}
+      <div className="px-4 md:m-5 md:ml-20">
         <div className="mt-5 font-semibold text-4xl">
           Turn your skills into <br />
           real, world <br />
@@ -80,45 +77,38 @@ const Section1 = memo(() => {
         </div>
       </div>
 
-      {/* Right Section – Image Carousel */}
+      {/* Right Section – Updated Image Carousel using motion.img */}
       <div className="flex w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
-        {/* Container for carousel – controls width/height of all images */}
-        <div className="relative w-[250px] sm:w-[280px] md:w-[320px]  sm:h-[400px] md:h-[650px]">
-
+        <div className="relative w-[250px] sm:w-[280px] md:w-[320px] sm:h-[400px] md:h-[650px]">
           {images.map((img, idx) => {
-            const isActive = idx === activeIdx;     // Determine if current image is active
-            const offset = idx * 60;                // Horizontal offset (spacing between images)
+            const isActive = idx === activeIdx;
+            const offset = idx * 60;
 
             return (
-              // Motion div for image wrapper – allows scale/position animation
-              <motion.div
+              <motion.img
                 key={img.alt}
-                onClick={() => handleImageClick(idx)} // Clicking image changes active one
-                className="absolute rounded-xl shadow-lg cursor-pointer overflow-hidden"
-                style={{
-                  left: `${offset}px`,              // Stagger images horizontally
-                  zIndex: isActive ? 30 : img.z,    // Put active image on top
-                  transform: `scale(${isActive ? 1 : 0.85})`, // Scale active image larger
-                  transition: 'all 0.4s cubic-bezier(.4,0,.2,1)', // Smooth animation
-                  width: '260px',
-                  height: '460px',
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                onClick={() => handleImageClick(idx)}
+                className="absolute rounded-xl shadow-lg cursor-pointer w-[260px] h-[460px] object-cover"
+                initial={false}
+                animate={{
+                  scale: isActive ? 1 : 0.85,
+                  x: offset,
+                  zIndex: isActive ? 30 : img.z,
                   boxShadow: isActive
-                    ? '0 2px 8px rgba(0,0,0,0.1)'  // Stronger shadow for active
-                    : '0 50px 30px rgba(0,0,0,0.5)',   // Lighter shadow for inactive
+                    ? '0 2px 8px rgba(0,0,0,0.1)'
+                    : '0 50px 30px rgba(0,0,0,0.5)',
                 }}
-              >
-                {/* '0 2px 8px rgba(0,0,0,0.1)' */}
-                {/* Actual image inside the animated wrapper */}
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full relative h-full object-cover"
-                />
-              </motion.div>
+                transition={{
+                  type: 'spring',
+                  stiffness: 260,
+                  damping: 26,
+                }}
+              />
             );
           })}
-
         </div>
       </div>
     </div>

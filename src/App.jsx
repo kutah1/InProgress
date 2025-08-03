@@ -7,7 +7,7 @@ import ForgotPWord from './components/MainPage/AuthPages/ForgotPWord'
 import EmailVerification from './components/MainPage/AuthPages/EmailVerification'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import FilterSearch from './components/Dashboard/FilterSearch'
-
+import Dashboard from './components/Dashboard/Dashboard'
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Route path='/emailverification' element={<EmailVerification/>}/>
 
          <Route path='/filter' element={<FilterSearch/>}/>
-
+         <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
     </BrowserRouter>
    
