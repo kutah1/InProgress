@@ -78,8 +78,44 @@ const Section1 = memo(() => {
       </div>
 
       {/* Right Section – Updated Image Carousel using motion.img */}
-      <div className="flex w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
-        <div className="relative w-[250px] sm:w-[280px] md:w-[320px] sm:h-[400px] md:h-[650px]">
+      <div className="flex-col w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
+
+
+       <div className=" flex-col justify-center text-center">
+
+      <div className="flex flex-row order-1">
+        <img src={Yellow} className="h-80 w-65 rounded-xl sticky bg-red-500  transform -translate-x-30 translate-y-20 order-3"/>
+
+        
+        <img src={Green} className="h-75 w-55 rounded-xl bg-yellow-500  transform translate-x-58  translate-y-25 order-2"/>
+
+        
+        <img src={Red} className="h-100 w-60 rounded-xl  bg-green-500 translate-y-8  translate-x-30 order-1   "/>
+
+       
+        
+      </div>
+
+      </div>
+
+
+      <div className="order-2 shadow-2xl  shadow-gray-900 ml-[25%] text-lg sticky p-4  transform -translate-y-20 text-black bg-white rounded-2xl w-[400px] h-[180px]" >
+        
+        <h1>Mark Moss</h1>
+         <div className="text-gray-600 text-sm">
+          Mobile App Development (iOS & Android)
+         </div>
+         <div className="mt-3">
+          <p>Need an app for your business? I build fast,
+            <br />
+            scalable mobile apps with intuitive <br />
+            designs and seamless functionality
+          </p>
+         </div>
+        </div>
+
+
+        {/* <div className="relative w-[250px] sm:w-[280px] md:w-[320px] sm:h-[400px] md:h-[650px]">
           {images.map((img, idx) => {
             const isActive = idx === activeIdx;
             const offset = idx * 60;
@@ -109,7 +145,7 @@ const Section1 = memo(() => {
               />
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );
