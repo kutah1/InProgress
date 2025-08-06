@@ -19,16 +19,16 @@ import LadyInPink from '../../assets/images/DashboardImages/LadyInPink.jpg'
 import Screen from '../../assets/images/DashboardImages/Screen.jpg'
 
 const dummyCards = [
-  { id: 1, title: 'SEO Blog Writing',description:`Boost your website traffic with  engaging, SEO-optimized blog posts crafted to drive results and keep your  readers hooked` ,
+  { id: 1,name:'Olivia Rhye', title: 'SEO Blog Writing',description:`Boost your website traffic with  engaging, SEO-optimized blog posts crafted to drive results and keep your  readers hooked` ,
     rating: 5, image: Screen, talent: 'Talent A' },
-  { id: 2, title: 'Photo Retouching',description:`Bring your photos to life with expert  color correction, skin retouching, and  detailed enhancements for a polished finish`, rating: 4, image: LadyInPink, talent: 'Talent B' },
-  { id: 3, title: 'SEO Blog Writing',description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', rating: 5, image: Screen, talent: 'Talent C' },
-  { id: 4, title: 'Brand Design', rating: 4,description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', image: LadyInPink, talent: 'Talent D' },
-  { id: 5, title: 'UX Review', rating: 4,description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', image:Screen, talent: 'Talent E' },
+  { id: 2,name:'Sophia Nartey', title: 'Photo Retouching',description:`Bring your photos to life with expert  color correction, skin retouching, and  detailed enhancements for a polished finish`, rating: 4, image: LadyInPink, talent: 'Talent Gig' },
+  { id: 3,name:'Olivia Rhye', title: 'SEO Blog Writing',description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', rating: 5, image: Screen, talent: 'Talent Gig' },
+  { id: 4,name:'Sophia Nartey', title: 'Brand Design', rating: 4,description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', image: LadyInPink, talent: 'Talent Gig' },
+  { id: 5, name:'Olivia Rhye',title: 'UX Review', rating: 4,description:'Boost your website traffic with engaging, SEO-optimized blog posts crafted to drive results and keep your readers hooked', image:Screen, talent: 'Talent Gig' },
 ];
 
 const SidebarIcon = ({ icon, label }) => (
-  <div className="flex items-center gap-4 hover:bg-orange-500 p-3 rounded-md cursor-pointer text-white">
+  <div className="flex items-center gap-4 hover:bg-orange-500 mt-7 p-3 rounded-md cursor-pointer text-white">
     {icon}
     <span className="hidden group-hover:inline-block">{label}</span>
   </div>
@@ -43,31 +43,35 @@ const Dashboard = () => {
       {/* Sidebar */}
       <motion.div
         animate={{ width: expanded ? 220 : 80 }}
-        className="bg-orange-600 text-white p-4 pt-6 group transition-all duration-100"
+        className="bg-gradient-to-b from-orange-500 via-orange-400 to-gray-400 text-white p-4 pt-6 group transition-all duration-100"
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
-        <SidebarIcon icon={<GiBrickWall />} label="Dashboard" className="w-7 h-7 my-5 mt-50 " />
-        <SidebarIcon icon={<BsChatTextFill  className="w-7 h-7 text-[#0F172A]  my-5" />} label="Messages" />
-        <SidebarIcon icon={<GiTakeMyMoney className="w-7 h-7 text-[#0F172A]   my-5  " />} label="Payment" />
-        <SidebarIcon icon={<TfiSharethisAlt  className="w-7 h-7 text-[#0F172A]  my-5" />} label="Reviews" />
-        <SidebarIcon icon={<BiSolidSend  className="w-7 h-7 text-[#0F172A]  my-5" />} label="Submission" />
-        <SidebarIcon icon={<FaUserCircle className="w-7 h-7 text-[#0F172A]  my-5" />} label="Account" />
+        <SidebarIcon icon={<GiBrickWall />} label="Dashboard" className="w-7 h-7  " />
+        <SidebarIcon icon={<BsChatTextFill  className="w-7 h-7 text-[#0F172A]  my-2" />} label="Messages" />
+        <SidebarIcon icon={<GiTakeMyMoney className="w-7 h-7 text-[#0F172A]   my-2  " />} label="Payment" />
+        <SidebarIcon icon={<TfiSharethisAlt  className="w-7 h-7 text-[#0F172A]  my-2" />} label="Reviews" />
+        <SidebarIcon icon={<BiSolidSend  className="w-7 h-7 text-[#0F172A]  my-2" />} label="Submission" />
+        <SidebarIcon icon={<FaUserCircle className="w-7 h-7 text-[#0F172A]  my-2" />} label="Account" />
       </motion.div>
 
       {/* Main content */}
       <div className="flex-1 p-6">
         {/* Top bar */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-around items-center mb-6">
           <div className="flex gap-2 items-center">
-            <input className="border px-4 py-2 rounded-full" placeholder="Search for talents" />
-            <button className="bg-[#0F172A] text-white px-4 py-2 rounded-full">Search</button>
-            <button className="border px-4 py-2 rounded-full">Talent gig</button>
-            <button className="border px-4 py-2 rounded-full">Lecture-featured gig</button>
+            <div className='border rounded-4xl'>
+             <input className=" px-4 py-2 rounded-full focus:outline-0" placeholder="Search for talents" />
+            <button className="bg-[#0F172A] text-white px-8 py-2 m-1 rounded-full">Search</button>
+
+            </div>
+      
+            <button className="border-orange-500 border px-4 py-2 rounded-full">Talent gig</button>
+            <button className="border-orange-500 border px-4 py-2 rounded-full">Lecture-featured gig</button>
           </div>
           <div className="flex items-center gap-4">
-            <HiOutlineCog size={24} />
-            <HiOutlineBell size={24} />
+            <HiOutlineCog size={38}  className='bg-orange-500 rounded-xl text-white '/>
+            <HiOutlineBell size={38} className='bg-orange-500 rounded-xl text-white ' />
           </div>
         </div>
 
@@ -153,7 +157,7 @@ const Dashboard = () => {
               <motion.div
                 key={card.id}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white rounded-xl shadow cursor-pointer flex flex-col justify-center p-4 h-92"
+                className="bg-white rounded-xl shadow cursor-pointer flex flex-col justify-center p-4 h-110"
               >
                 <img
                   src={card.image}
@@ -165,16 +169,26 @@ const Dashboard = () => {
                    <p className="text-sm  text-orange-500 "> {card.talent}</p>
                 <p className="text-white bg-orange-500 rounded-xl px-6 p-1 mt-1 mr-5">Pro</p>
                 </div>
-               
-                <div className="flex mt-1">
+                <div className='font-semibold text-xl'>{card.title}</div>
+
+                <div className='flex flex-row gap-5'>
+
+                  <img src={card.image} alt=""  className='w-9 h-9 rounded-full'/>
+                  <div>
+                   <p>{card.name}</p>
+                  <div className="flex w-15 h-15 mt-1">
                   {'★'.repeat(card.rating)}{'☆'.repeat(5 - card.rating)}
                 </div>
+                  </div>
+                </div>
+               
+             
               </motion.div>
             ))}
           </div>
         </div>
 
-        <p className="text-center text-sm text-gray-400 mt-12">&copy; Copyright 2025. All Rights Reserved by GigUpp</p>
+        <p className="text-center text-sm text-black mt-12">&copy; Copyright 2025. All Rights Reserved by GigUpp</p>
       </div>
     </div>
   );
