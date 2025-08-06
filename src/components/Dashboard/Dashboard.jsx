@@ -105,7 +105,7 @@ const Dashboard = () => {
                   <h2 className="font-semibold mb-1 text-2xl">Upgrade to Pro</h2>
                   <p className="">Unlock featured student <br /> matching</p>
                 </div>
-                <FaGem size={38} className="text-orange-400 items-end" />
+                <FaGem size={68} className="text-pink-400 items-end" />
               </div>
             </div>
             <div className="bg-white p-4 rounded-xl shadow flex items-start gap-4">
