@@ -32,6 +32,7 @@ function App() {
 
          <Route path='/filter' element={<FilterSearch/>}/>
          <Route path='/dashboard' element={<Dashboard/>}/>
+        
       </Routes>
     </BrowserRouter>
    

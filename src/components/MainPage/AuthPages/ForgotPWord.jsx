@@ -28,7 +28,7 @@ const ForgotPWord = () => {
          <p className='text-left m-3 mt-20 font-semibold'>
             Email
             </p>
-            <input type="email" className='border border-gray-300 rounded-2xl p-2 w-full mb-4' placeholder='Enter your email' />
+            <input type="email" className=' border-gray-400 border-2 rounded-2xl p-3 w-full mb-4' placeholder='Enter your email' />
 
 
 
