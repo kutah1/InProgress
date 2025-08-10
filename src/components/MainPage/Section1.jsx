@@ -78,30 +78,30 @@ const Section1 = memo(() => {
       </div>
 
       {/* Right Section – Updated Image Carousel using motion.img */}
-      <div className="flex-col w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
+      <div className="flex-col w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-visible relative">
 
 
-       <div className="flex-col justify-center text-center relative h-[400px]">
+       <div className="flex-col justify-center text-center relative h-[500px] ">
 
-      <div className="relative">
+      <div className="relative w-full ">
         {/* First image (foreground) */}
         <img 
           src={Red} 
-          className="absolute h-[450px] w-[280px] rounded-xl shadow-lg z-30 top-8 left-10"
+          className="absolute h-[450px] w-[280px] rounded-xl shadow-lg z-30 top-8 left-[calc(50%-170px)]"
           alt="Foreground image"
         />
         
         {/* Second image (middle) */}
         <img 
           src={Yellow} 
-          className="absolute h-[420px] w-[250px] rounded-xl shadow-lg z-20 top-14 left-[170px]" 
+          className="absolute h-[420px] w-[250px] rounded-xl shadow-lg z-20 top-14 left-[calc(50%-30px)]" 
           alt="Middle image"
         />
         
         {/* Third image (background) */}
         <img 
           src={Green} 
-          className="absolute h-[400px] w-[230px] rounded-xl shadow-lg z-10 top-20 left-[270px]"
+          className="absolute h-[400px] w-[230px] rounded-xl shadow-lg z-10 top-20 left-[calc(50%+70px)]"
           alt="Background image"
         />
       </div>
@@ -109,14 +109,14 @@ const Section1 = memo(() => {
       </div>
 
 
-      <div className="relative shadow-2xl shadow-gray-900 ml-[25%] text-lg p-4 transform -translate-y-20 z-40 text-black bg-white rounded-2xl w-[400px] h-[180px]" >
+      <div className="absolute shadow-2xl shadow-gray-900 text-lg p-5 z-40 text-black bg-white rounded-2xl w-[360px] h-[160px]   transform translate-x-50 translate-y-15 bottom-[20px]" >
         
-        <h1>Mark Moss</h1>
+        <h1 className="font-semibold text-xl">Mark Moss</h1>
          <div className="text-gray-600 text-sm">
           Mobile App Development (iOS & Android)
          </div>
          <div className="mt-3">
-          <p>Need an app for your business? I build fast,
+          <p className="text-sm leading-relaxed">Need an app for your business? I build fast,
             <br />
             scalable mobile apps with intuitive <br />
             designs and seamless functionality

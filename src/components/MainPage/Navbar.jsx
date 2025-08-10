@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="flex plus-jakarta-sans flex-col md:flex-row items-center justify-between text-white p-5 w-full gap-4 md:gap-0" style={{backgroundColor:'#0F172A'}} aria-label="Main Navigation">
+    <nav className="flex plus-jakarta-sans flex-col md:flex-row items-center justify-between text-white p-3 w-full gap-4 md:gap-0" style={{backgroundColor:'#0F172A'}} aria-label="Main Navigation">
       <div className="flex w-full md:w-auto items-center justify-between">
         <p className="mb-2 md:mb-0 text-3xl font-light text-center w-full md:ml-4">GIGUPP</p>
         <button className="md:hidden text-3xl" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>
