@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useState, useMemo, useCallback, memo } from "react";
-import Red from '../../assets/images/PCandDayLight.jpg';
-import Yellow from '../../assets/images/PCandNighLight.jpg';
-import Green from '../../assets/images/PCandHands.jpg';
+import Red from '../../assets/images/PCandDayLight.jpeg';
+import Yellow from '../../assets/images/PCandNighLight.jpeg';
+import Green from '../../assets/images/PCandHands.jpeg';
 
 const Section1 = memo(() => {
   const images = useMemo(() => [
@@ -81,25 +81,35 @@ const Section1 = memo(() => {
       <div className="flex-col w-full md:w-1/2 justify-center items-center mt-10 md:mt-0 overflow-hidden">
 
 
-       <div className=" flex-col justify-center text-center">
+       <div className="flex-col justify-center text-center relative h-[400px]">
 
-      <div className="flex flex-row order-1">
-        <img src={Yellow} className="h-80 w-65 rounded-xl sticky bg-red-500  transform -translate-x-30 translate-y-20 order-3"/>
-
+      <div className="relative">
+        {/* First image (foreground) */}
+        <img 
+          src={Red} 
+          className="absolute h-[450px] w-[280px] rounded-xl shadow-lg z-30 top-8 left-10"
+          alt="Foreground image"
+        />
         
-        <img src={Green} className="h-75 w-55 rounded-xl bg-yellow-500  transform translate-x-58  translate-y-25 order-2"/>
-
+        {/* Second image (middle) */}
+        <img 
+          src={Yellow} 
+          className="absolute h-[420px] w-[250px] rounded-xl shadow-lg z-20 top-14 left-[170px]" 
+          alt="Middle image"
+        />
         
-        <img src={Red} className="h-100 w-60 rounded-xl  bg-green-500 translate-y-8  translate-x-30 order-1   "/>
-
-       
-        
+        {/* Third image (background) */}
+        <img 
+          src={Green} 
+          className="absolute h-[400px] w-[230px] rounded-xl shadow-lg z-10 top-20 left-[270px]"
+          alt="Background image"
+        />
       </div>
 
       </div>
 
 
-      <div className="order-2 shadow-2xl  shadow-gray-900 ml-[25%] text-lg sticky p-4  transform -translate-y-20 text-black bg-white rounded-2xl w-[400px] h-[180px]" >
+      <div className="relative shadow-2xl shadow-gray-900 ml-[25%] text-lg p-4 transform -translate-y-20 z-40 text-black bg-white rounded-2xl w-[400px] h-[180px]" >
         
         <h1>Mark Moss</h1>
          <div className="text-gray-600 text-sm">
