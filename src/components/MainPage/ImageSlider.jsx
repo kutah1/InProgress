@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Olivia from '../../assets/images/Olivia.png';
 import Chair from '../../assets/images/chair.jpg';
@@ -34,22 +34,18 @@ const cards = [
   },
 ];
 
-const SLIDE_INTERVAL = 5000;
+// Removed auto-sliding interval
 
 const ImageSlider = () => {
-  const [activeIdx, setActiveIdx] = useState(0);
+  // Start with the middle card (index 1) as the active card
+  const [activeIdx, setActiveIdx] = useState(1);
 
-  const nextCard = useCallback(() => {
-    setActiveIdx((prev) => (prev + 1) % cards.length);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(nextCard, SLIDE_INTERVAL);
-    return () => clearInterval(interval);
-  }, [nextCard]);
+  // Removed the auto-sliding functionality while preserving manual navigation
 
   const handleCardClick = useCallback((idx) => {
     setActiveIdx(idx);
+    // Added console log to help with debugging
+    console.log(`Card ${idx} clicked`);
   }, []);
 
   const sliderCards = useMemo(() => {
@@ -65,7 +61,7 @@ const ImageSlider = () => {
             scale: isActive ? 1.1 : 0.85,
             opacity: isActive ? 1 : 0.4,
             x: offset * 300,
-            zIndex: isActive ? 30 : 10,
+            zIndex: isActive ? 30 : (10 - Math.abs(offset)), // Higher z-index for cards closer to center
           }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           onClick={() => handleCardClick(idx)}

@@ -4,7 +4,7 @@ import Footer from '../MainPage/Footer'
 import NoResult from '../../assets/images/NoResult.png'
 const FilterSearch = () => {
   return (
-    <>
+    <div className='plus-jakarta-sans'>
       <DashboardNavbar/>
       <div className='flex justify-center'>
 
@@ -21,7 +21,7 @@ const FilterSearch = () => {
           </div>
         </div>
       <Footer/>
-    </>
+    </div>
   )
 }
 

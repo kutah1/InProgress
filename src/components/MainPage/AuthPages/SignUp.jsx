@@ -67,7 +67,7 @@ const SignUp = () => {
             />
 
             <div>
-              <Link to='/dashboard'>
+              <Link to='/filter'>
               
               <button className='mt-5 text-white bg-[#FF790C] px-4 w-full rounded-lg p-2'>
                 Save

@@ -28,7 +28,7 @@ const dummyCards = [
 ];
 
 const SidebarIcon = ({ icon, label }) => (
-  <div className="flex items-center gap-4 hover:bg-orange-500 mt-7 p-3 rounded-md cursor-pointer text-white">
+  <div className="flex plus-jakarta-sans items-center gap-4 hover:bg-orange-500 mt-7 p-3 rounded-md cursor-pointer text-white">
     {icon}
     <span className="hidden group-hover:inline-block">{label}</span>
   </div>
@@ -39,7 +39,7 @@ const Dashboard = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className="flex min-h-screen font-sans bg-gray-100">
+    <div className="flex plus-jakarta-sans min-h-screen font-sans bg-gray-100">
       {/* Sidebar */}
       <motion.div
         animate={{ width: expanded ? 220 : 80 }}
@@ -56,7 +56,7 @@ const Dashboard = () => {
       </motion.div>
 
       {/* Main content */}
-      <div className="flex-1 p-6">
+      <div className="flex-1  p-6 plus-jakarta-sans">
         {/* Top bar */}
         <div className="flex justify-around items-center mb-6">
           <div className="flex gap-2 items-center">
@@ -76,7 +76,7 @@ const Dashboard = () => {
         </div>
 
         {/* Profile, Upgrade & Orders */}
-        <div className="flex-row flex  gap-6 mb-6">
+        <div className=" plus-jakarta-sans flex-row flex  gap-6 mb-6">
           {/* Profile */}
           <div className="bg-orange-500 p-4 rounded-xl shadow flex-row flex justify-center items-center gap-4 flex-1 ">
             <div className='flex-col text-center self-center justify-center w-1/3'>
@@ -98,7 +98,7 @@ const Dashboard = () => {
           </div>
 
           {/* Upgrade & Track Orders */}
-          <div className="flex flex-col gap-6 flex-1">
+          <div className="flex flex-col gap-6 flex-1 plus-jakarta-sans">
             <div className="bg-[#0F172A] text-white p-12 rounded-xl shadow">
               <div className="flex items-center justify-between gap-4">
                 <div>
@@ -120,7 +120,7 @@ const Dashboard = () => {
         </div>
 
         {/* Info cards */}
-        <div className="grid grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-3 gap-6 mb-6 plus-jakarta-sans">
           <div className="bg-white p-4 rounded-xl shadow flex flex-row items-start  gap-4">
             <FaUserGraduate size={28}  className='text-xl'/>
             <div>
@@ -146,13 +146,13 @@ const Dashboard = () => {
 
         {/* Recently viewed gigs */}
         <div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex plus-jakarta-sans justify-between items-center mb-4">
             <h2 className="font-bold text-xl">Recently viewed gig</h2>
             <button className="text-orange-500" onClick={() => setShowAll(true)}>See all</button>
           </div>
 
           {/* Updated slider section */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 plus-jakarta-sans gap-4">
             {(showAll ? dummyCards : dummyCards.slice(0, 3)).map((card) => (
               <motion.div
                 key={card.id}
@@ -188,7 +188,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <p className="text-center text-sm text-black mt-12">&copy; Copyright 2025. All Rights Reserved by GigUpp</p>
+        <p className="text-center plus-jakarta-sans text-sm text-black mt-12">&copy; Copyright 2025. All Rights Reserved by GigUpp</p>
       </div>
     </div>
   );
