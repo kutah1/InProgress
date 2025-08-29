@@ -52,8 +52,8 @@ const HelpPage = () => {
             <h1 className='text-4xl mt-10 mb-1'>How can we help you today?</h1>
             <h2 className='text-xl text-[#0F172A]'>Browse our FAQS or Chat with our support agent</h2>
             </div>
-            <div className='border flex flex-row justify-between rounded-3xl  m-10'>
-                <input type="text" name="" id="" placeholder='Search for talents' className='  focus:outline-0 px-20 p-3 w-[100%] ' />
+            <div className='border-[#A1A1AA] border-1 flex flex-row justify-between rounded-3xl pl-10  m-10'>
+                <input type="text" name="" id="" placeholder='Search for talents' className='  focus:outline-none px-20 p-3 text-left md:-translate-x-20 transform ' />
                 <button className='bg-gray-800 px-15 rounded-3xl m-2 text-white p-3'>Search </button>
 
             </div>
@@ -70,7 +70,7 @@ const HelpPage = () => {
 
 
     
-           <div className='plus-jakarta-sans grid grid-cols-1 md:grid-cols-3 gap-8 mx-10 my-15'>
+           <div className='plus-jakarta-sans grid grid-cols-1 md:grid-cols-3 gap-8 mx-10 my-15 mb-72'>
              {Data.map((item, idx) => {
                const Icon = item.icon;
                return (
